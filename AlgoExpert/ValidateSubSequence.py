@@ -1,3 +1,4 @@
+#Two pointer is the Main Logic Behind
 def isValidSubsequence(array, seq):
     arrIdx = 0
     seqIdx = 0
@@ -8,7 +9,7 @@ def isValidSubsequence(array, seq):
     return seqIdx == len(seq)
 
 
-	
+
 def isValidSubsequenceWithArrayDirect(array, seq):
     seqIdx = 0
     for i in array:
