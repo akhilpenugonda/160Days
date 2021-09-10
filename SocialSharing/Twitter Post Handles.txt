@@ -1,4 +1,4 @@
-Todays Code: <Code Name>>
+Todays Code: <Code Name>
 <Approach>.
 #160Days #Coding #Learning #Programming
 
