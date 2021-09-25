@@ -8,3 +8,10 @@ def minimumWaitingTime(queries):
 	return totalWaitTime
 		
 		
+def minimumWaitingTime(queries):
+    	queries.sort()
+	totalWait = 0
+	for idx, value in enumerate(queries):
+		queriesLeft = len(queries) - (idx + 1)
+		totalWait += value * queriesLeft
+	return totalWait
