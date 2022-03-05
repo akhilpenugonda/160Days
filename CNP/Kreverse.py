@@ -27,7 +27,6 @@ def kReverse(head, k) :
     curr.next = None
     newReverse, tail = reverseLL(head)
     tail.next = kReverse(NonReversepart, tempK)
-    
     return newReverse
     
         
