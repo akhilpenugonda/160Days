@@ -11,21 +11,21 @@ class Node :
 class Stack :
     #initialize init and other methods
     def __init__(self):
-        self.head = None
-        self.count = 0
+        self.__head = None
+        self.__count = 0
 
 
     '''----------------- Public Functions of Stack -----------------'''
 
 
     def getSize(self) :
-        return self.count
+        return self.__count
         #Implement the getSize() function
 
 
 
     def isEmpty(self) :
-        if(self.count):
+        if(self.__count):
             return False
         else:
             return True
@@ -34,13 +34,10 @@ class Stack :
 
 
     def push(self, data) :
-        self.count += 1
-        if(self.head is None):
-            self.head = Node(data)
-        else:
-            NewNode = Node(data)
-            NewNode.next = self.head
-            self.head = NewNode
+        self.__count += 1
+        NewNode = Node(data)
+        NewNode.next = self.__head
+        self.__head = NewNode
         #Implement the push(element) function
 
 
@@ -48,9 +45,9 @@ class Stack :
     def pop(self) :
         if(self.isEmpty()):
             return -1
-        topNode = self.head
-        self.head = self.head.next
-        self.count -= 1
+        topNode = self.__head
+        self.__head = self.__head.next
+        self.__count -= 1
         return topNode.data
         #Implement the pop() function
 
@@ -59,7 +56,7 @@ class Stack :
     def top(self) :
         if(self.isEmpty()):
             return -1
-        return self.head.data
+        return self.__head.data
         #Implement the top() function
         
 
