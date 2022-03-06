@@ -9,8 +9,8 @@ class Node :
 
 
 def swapNodes(head, i, j) :
-    p1, a1, n1 = None, None, None
-    p2, a2, n2 = None, None, None
+    p1, a1 = None, None
+    p2, a2 = None, None
     if(i < 0):
         return head
     if(j > (LengthOfLL(head)-1)):
