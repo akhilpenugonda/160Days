@@ -1,30 +1,28 @@
 from sys import stdin
+import queue
 
-from Node import Node
+class Node :
+    
+    def __init__(self, data) :
+        self.data = data
+        self.next = None
+
+
 class Stack :
     #initialize init and other methods
     def __init__(self):
         self.__head = None
         self.__count = 0
-
-
     '''----------------- Public Functions of Stack -----------------'''
-
-
     def getSize(self) :
         return self.__count
         #Implement the getSize() function
-
-
-
     def isEmpty(self) :
         if(self.__count):
             return False
         else:
             return True
         #Implement the isEmpty() function
-
-
 
     def push(self, data) :
         self.__count += 1
@@ -52,4 +50,25 @@ class Stack :
         return self.__head.data
         #Implement the top() function
         
+def isBalanced(expression) :
+    stack = Stack()
+    for i in expression:
+        if(i in ["("]):
+            stack.push("(")  
+            #print(i)
+            continue
+        elif(i in [")"]):
+            if(stack.isEmpty() or stack.pop() is not "("):
+                return False
+    if(stack.isEmpty()):
+        return True
+    else: 
+        return False
 
+expression = stdin.readline().strip()
+
+if isBalanced(expression) :
+	print("true")
+
+else :
+	print("false")

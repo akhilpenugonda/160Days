@@ -11,8 +11,8 @@ def isBalanced(expression) :
     stack = Stack()
     for i in expression:
         if(i in ["("]):
-            stack.push("(")   
-            print(i)
+            stack.push("(")  
+            #print(i)
             continue
         elif(i in [")"]):
             if(stack.isEmpty()):
