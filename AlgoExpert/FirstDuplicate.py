@@ -30,4 +30,3 @@ def firstDuplicateValue(array):
             return absValue
         array[absValue - 1] *= -1
     return -1
-
